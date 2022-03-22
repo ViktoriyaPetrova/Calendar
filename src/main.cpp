@@ -1,28 +1,14 @@
-//Viktoriya Petrova
-//CS 202
-//Program 2
-//February 3, 2021
-
-//This is the "main" portion of the program. This is where all function calls are made
-//and where the program is tested. There is a menu with 8 choices that helps test the
-//different aspects of the program (inserting, removing, retrieving, displaying).
-//Options 5 and 6 use RTTI as per program requirements. Options 1 - 3 use upcasting and
-//dynamic binding.
-
-
-
 #include "calendar.h"
-
 
 int main()
 {
 
-    calendar january;		//Represent one month of a calendar
-    char response = 'N';		//User response (Y or N)
-    char title[50];		        //Title of event used for searching
-    int  main_menu = 0;	        //User response (1 - 8)
-    int  items;		        //Used to set the to-do array size at runtime
-    int  day;			//Represents one day of the month (1 - 31)
+    calendar january;
+    char response = 'N';
+    char title[50];
+    int  main_menu = 0;
+    int  items;
+    int  day;
 
     do
     {
@@ -112,7 +98,6 @@ int main()
         }
 
         //Retrieving an item with RTTI.
-        //Ugly code but I thought it was the perfect place to experience it.
         if(main_menu == 5)
         {
             calendar_item *item = NULL;
@@ -152,8 +137,7 @@ int main()
             }
         }
 
-        //Mark an item complete in the to-do list
-        //RTTI function program requierement.
+        //Mark an item complete in the to-do list - RTTI
         if(main_menu == 6)
         {
             calendar_item *item = NULL;
